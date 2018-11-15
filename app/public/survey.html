@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Friend Finder</title>
+    <meta name="description" content="">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Survey Questions</h1>
+        <h4>About You</h4>
+        <div class="form-group row">
+            <label for="example-text-input" class="col-2 col-form-label">Name (Required)</label>
+            <div class="col-10">
+                <input class="form-control" type="text" value="" id="name-input">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="example-url-input" class="col-2 col-form-label">Link to photo image (Required)</label>
+            <div class="col-10">
+                <input class="form-control" type="url" value="" id="photo-url-input">
+            </div>
+        </div>
+        <h4>Question 1</h4>
+        <h6>I make friends easily.</h6>
+        <select class="form-control" id="q1">
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2 (Disagree)</option>
+            <option value="3">3 (Neutral)</option>
+            <option value="4">4 (Agree)</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <h4>Question 2</h4>
+        <h6>I have a vivid imagination.</h6>
+        <select class="form-control" id="q2">
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2 (Disagree)</option>
+            <option value="3">3 (Neutral)</option>
+            <option value="4">4 (Agree)</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <h4>Question 3</h4>
+        <h6>I worry about things.</h6>
+        <select class="form-control" id="q3">
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2 (Disagree)</option>
+            <option value="3">3 (Neutral)</option>
+            <option value="4">4 (Agree)</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <h4>Question 4</h4>
+        <h6>I love large parties.</h6>
+        <select class="form-control" id="q4">
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2 (Disagree)</option>
+            <option value="3">3 (Neutral)</option>
+            <option value="4">4 (Agree)</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <h4>Question 5</h4>
+        <h6>I get angry easily.</h6>
+        <select class="form-control" id="q5">
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2 (Disagree)</option>
+            <option value="3">3 (Neutral)</option>
+            <option value="4">4 (Agree)</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <h4>Question 6</h4>
+        <h6>I like to solve complex problems.</h6>
+        <select class="form-control" id="q6">
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2 (Disagree)</option>
+            <option value="3">3 (Neutral)</option>
+            <option value="4">4 (Agree)</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <h4>Question 7</h4>
+        <h6>I tend to vote for liberal political candidates.</h6>
+        <select class="form-control" id="q7">
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2 (Disagree)</option>
+            <option value="3">3 (Neutral)</option>
+            <option value="4">4 (Agree)</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <h4>Question 8</h4>
+        <h6>I would never cheat on my taxes.</h6>
+        <select class="form-control" id="q8">
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2 (Disagree)</option>
+            <option value="3">3 (Neutral)</option>
+            <option value="4">4 (Agree)</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <h4>Question 9</h4>
+        <h6>I dislike being the center of attention.</h6>
+        <select class="form-control" id="q9">
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2 (Disagree)</option>
+            <option value="3">3 (Neutral)</option>
+            <option value="4">4 (Agree)</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <h4>Question 10</h4>
+        <h6>I am afraid that I will do the wrong thing.</h6>
+        <select class="form-control" id="q10">
+            <option value="1">1 (Strongly Disagree)</option>
+            <option value="2">2 (Disagree)</option>
+            <option value="3">3 (Neutral)</option>
+            <option value="4">4 (Agree)</option>
+            <option value="5">5 (Strongly Agree)</option>
+        </select>
+        <br><br>
+        <button type="submit" class="btn btn-primary" id="survey-submit">Submit</button>
+    </div>
+
+    <!-- Best friend match modal -->
+    <div class="modal" tabindex="-1" role="dialog" id="best-match-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Your best friend!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Best friend name -->
+                    <h5 id="best-friend-name"></h5>
+                    <!-- Best friend picture -->
+                    <img src="" id="best-friend-img" class="img-thumbnail">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Error modal -->
+    <div class="modal" tabindex="-1" role="dialog" id="error-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Please complete all required fields.</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <br><br><br>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/albertcoder/Friend-Finder">GitHub
+                    Repo</a></p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- POST request to /api/friends -->
+    <script type="text/javascript">
+        // Question: What does this code do?
+        $("#survey-submit").on("click", function (event) {
+            event.preventDefault();
+            // newFriend object to store survey responses
+            var newFriend = {
+                name: $("#name-input").val().trim(),
+                photo: $("#photo-url-input").val().trim(),
+                scores: [
+                    $("#q1").val().trim(),
+                    $("#q2").val().trim(),
+                    $("#q3").val().trim(),
+                    $("#q4").val().trim(),
+                    $("#q5").val().trim(),
+                    $("#q6").val().trim(),
+                    $("#q7").val().trim(),
+                    $("#q8").val().trim(),
+                    $("#q9").val().trim(),
+                    $("#q10").val().trim(),
+                ]
+            };
+            if (newFriend.name === "" || newFriend.photo === "") {
+                $("#error-modal").modal("show");
+            } else {
+                // POST request to sends newFriend object data to /api/friends
+                $.post("/api/friends", newFriend)
+                    .then(function (data) {
+                        if (data) {
+                            console.log(data);
+                            // populate modal with best friend data
+                            $("#best-friend-name").text(data.name);
+                            $("#best-friend-img").attr({
+                                "src": data.photo
+                            })
+                            $("#best-match-modal").modal("show");
+                            // clear form
+                            $(".form-control").val("");
+                        }
+                    });
+            }
+        });
+    </script>
+    <!-- external JS -->
+    <script src="" async defer></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+
+</html>
